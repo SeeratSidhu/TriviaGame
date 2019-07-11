@@ -58,6 +58,7 @@ let score = 0;
 var interval;
 
 function setQuestion(){
+
     let q = questions[currentQuestion];
     question.innerHTML = "<p>" + q.question + "</p>";
     choiceA.innerHTML = q.A;
@@ -86,6 +87,8 @@ function showScore(){
     quiz.style.display = "none";
     scoreContainer.style.display = "block";
     scoreContainer.innerHTML = "You got " + score + " out of " + questions.length + " correct";
+    clearInterval(interval);
+    
 }
 
 function checkAnswer(answer){
@@ -98,6 +101,7 @@ function checkAnswer(answer){
         setQuestion();
     }else {
         clearInterval(interval);
+        document.getElementById("timerDiv").innerHTML = "All done";
         showScore();
     }
 }
