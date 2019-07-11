@@ -86,7 +86,7 @@ function setTimer(){
 function showScore(){
     quiz.style.display = "none";
     scoreContainer.style.display = "block";
-    scoreContainer.innerHTML = "You got " + score + " out of " + questions.length + " correct";
+    scoreContainer.innerHTML = "You got " + score + " out of " + questions.length + " correct!";
     clearInterval(interval);
     
 }
